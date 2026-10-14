@@ -1,0 +1,279 @@
+experiment:
+  name: molprotx_{dataset}_interaction
+  dataset: biosnap
+  seed: 42
+  output_dir: outputs/{dataset}/MolProtX/seed42
+
+datasets:
+  bindingdb:
+    train_csv: dataset/splits/bindingdb/train.csv
+    val_csv: dataset/splits/bindingdb/val.csv
+    test_csv: dataset/splits/bindingdb/test.csv
+    drug_id_column: Drug_ID
+    protein_id_column: Protein_ID
+    smiles_column: SMILES
+    sequence_column: Protein
+    label_column: Label
+    feature_files:
+      protein:
+        esm2: artifacts/features/bindingdb/protein_esm2.pt
+        prott5: artifacts/features/bindingdb/protein_prott5.pt
+        ankh: artifacts/features/bindingdb/protein_ankh.pt
+      drug:
+        molformer: artifacts/features/bindingdb/drug_molformer.pt
+        chemberta: artifacts/features/bindingdb/drug_chemberta.pt
+        moldeberta: artifacts/features/bindingdb/drug_moldeberta.pt
+  biosnap:
+    train_csv: dataset/splits/biosnap/train.csv
+    val_csv: dataset/splits/biosnap/val.csv
+    test_csv: dataset/splits/biosnap/test.csv
+    drug_id_column: Drug_ID
+    protein_id_column: Protein_ID
+    smiles_column: SMILES
+    sequence_column: Protein
+    label_column: Label
+    feature_files:
+      protein:
+        esm2: artifacts/features/biosnap/protein_esm2.pt
+        prott5: artifacts/features/biosnap/protein_prott5.pt
+        ankh: artifacts/features/biosnap/protein_ankh.pt
+      drug:
+        molformer: artifacts/features/biosnap/drug_molformer.pt
+        chemberta: artifacts/features/biosnap/drug_chemberta.pt
+        moldeberta: artifacts/features/biosnap/drug_moldeberta.pt
+  celegans:
+    train_csv: dataset/splits/celegans/train.csv
+    val_csv: dataset/splits/celegans/val.csv
+    test_csv: dataset/splits/celegans/test.csv
+    drug_id_column: Drug_ID
+    protein_id_column: Protein_ID
+    smiles_column: SMILES
+    sequence_column: Protein
+    label_column: Label
+    feature_files:
+      protein:
+        esm2: artifacts/features/celegans/protein_esm2.pt
+        prott5: artifacts/features/celegans/protein_prott5.pt
+        ankh: artifacts/features/celegans/protein_ankh.pt
+      drug:
+        molformer: artifacts/features/celegans/drug_molformer.pt
+        chemberta: artifacts/features/celegans/drug_chemberta.pt
+        moldeberta: artifacts/features/celegans/drug_moldeberta.pt
+  davis:
+    train_csv: dataset/splits/davis/train.csv
+    val_csv: dataset/splits/davis/val.csv
+    test_csv: dataset/splits/davis/test.csv
+    drug_id_column: Drug_ID
+    protein_id_column: Protein_ID
+    smiles_column: SMILES
+    sequence_column: Protein
+    label_column: Label
+    feature_files:
+      protein:
+        esm2: artifacts/features/davis/protein_esm2.pt
+        prott5: artifacts/features/davis/protein_prott5.pt
+        ankh: artifacts/features/davis/protein_ankh.pt
+      drug:
+        molformer: artifacts/features/davis/drug_molformer.pt
+        chemberta: artifacts/features/davis/drug_chemberta.pt
+        moldeberta: artifacts/features/davis/drug_moldeberta.pt
+  drugbank:
+    train_csv: dataset/splits/drugbank/train.csv
+    val_csv: dataset/splits/drugbank/val.csv
+    test_csv: dataset/splits/drugbank/test.csv
+    drug_id_column: Drug_ID
+    protein_id_column: Protein_ID
+    smiles_column: SMILES
+    sequence_column: Protein
+    label_column: Label
+    feature_files:
+      protein:
+        esm2: artifacts/features/drugbank/protein_esm2.pt
+        prott5: artifacts/features/drugbank/protein_prott5.pt
+        ankh: artifacts/features/drugbank/protein_ankh.pt
+      drug:
+        molformer: artifacts/features/drugbank/drug_molformer.pt
+        chemberta: artifacts/features/drugbank/drug_chemberta.pt
+        moldeberta: artifacts/features/drugbank/drug_moldeberta.pt
+  human:
+    train_csv: dataset/splits/human/train.csv
+    val_csv: dataset/splits/human/val.csv
+    test_csv: dataset/splits/human/test.csv
+    drug_id_column: Drug_ID
+    protein_id_column: Protein_ID
+    smiles_column: SMILES
+    sequence_column: Protein
+    label_column: Label
+    feature_files:
+      protein:
+        esm2: artifacts/features/human/protein_esm2.pt
+        prott5: artifacts/features/human/protein_prott5.pt
+        ankh: artifacts/features/human/protein_ankh.pt
+      drug:
+        molformer: artifacts/features/human/drug_molformer.pt
+        chemberta: artifacts/features/human/drug_chemberta.pt
+        moldeberta: artifacts/features/human/drug_moldeberta.pt
+  kiba:
+    train_csv: dataset/splits/kiba/train.csv
+    val_csv: dataset/splits/kiba/val.csv
+    test_csv: dataset/splits/kiba/test.csv
+    drug_id_column: Drug_ID
+    protein_id_column: Protein_ID
+    smiles_column: SMILES
+    sequence_column: Protein
+    label_column: Label
+    feature_files:
+      protein:
+        esm2: artifacts/features/kiba/protein_esm2.pt
+        prott5: artifacts/features/kiba/protein_prott5.pt
+        ankh: artifacts/features/kiba/protein_ankh.pt
+      drug:
+        molformer: artifacts/features/kiba/drug_molformer.pt
+        chemberta: artifacts/features/kiba/drug_chemberta.pt
+        moldeberta: artifacts/features/kiba/drug_moldeberta.pt
+  kinase:
+    train_csv: dataset/splits/kinase/train.csv
+    val_csv: dataset/splits/kinase/val.csv
+    test_csv: dataset/splits/kinase/test.csv
+    drug_id_column: Drug_ID
+    protein_id_column: Protein_ID
+    smiles_column: SMILES
+    sequence_column: Protein
+    label_column: Label
+    feature_files:
+      protein:
+        esm2: artifacts/features/kinase/protein_esm2.pt
+        prott5: artifacts/features/kinase/protein_prott5.pt
+        ankh: artifacts/features/kinase/protein_ankh.pt
+      drug:
+        molformer: artifacts/features/kinase/drug_molformer.pt
+        chemberta: artifacts/features/kinase/drug_chemberta.pt
+        moldeberta: artifacts/features/kinase/drug_moldeberta.pt
+
+feature_extraction:
+  device: cuda
+  dtype: float16
+  output_dtype: float16
+  protein_batch_size: 2
+  drug_batch_size: 32
+  models:
+    esm2:
+      model_path: pretrained/esm2_t33_650M_UR50D
+      source_id: facebook/esm2_t33_650M_UR50D
+      use_safetensors: true
+      expected_dim: 1280
+      max_length: 1024
+      trust_remote_code: false
+    prott5:
+      model_path: pretrained/prot_t5_xl_uniref50
+      source_id: Rostlab/prot_t5_xl_uniref50
+      use_safetensors: false
+      expected_dim: 1024
+      max_length: 1024
+      trust_remote_code: false
+    ankh:
+      model_path: pretrained/ankh-base
+      source_id: ElnaggarLab/ankh-base
+      use_safetensors: false
+      expected_dim: 768
+      dtype: float32
+      max_length: 1024
+      trust_remote_code: false
+    molformer:
+      model_path: pretrained/MoLFormer-XL-both-10pct
+      source_id: ibm-research/MoLFormer-XL-both-10pct
+      source_revision: compat-v4
+      use_safetensors: true
+      expected_dim: 768
+      dtype: float32
+      max_length: 202
+      trust_remote_code: true
+    chemberta:
+      model_path: pretrained/ChemBERTa-100M-MLM
+      source_id: DeepChem/ChemBERTa-100M-MLM
+      use_safetensors: true
+      expected_dim: 768
+      max_length: 510
+      trust_remote_code: false
+    moldeberta:
+      model_path: pretrained/MolDeBERTa-base-123M-mtr
+      source_id: SaeedLab/MolDeBERTa-base-123M-mtr
+      use_safetensors: true
+      expected_dim: 768
+      max_length: 128
+      trust_remote_code: false
+
+model:
+  positional_encoding: none
+  positional_scale_init: 1.0
+  protein_branch:
+    projected_dim: 1024
+    first_token_dim: 32
+    first_output_dim: 512
+    deep_token_dim: 16
+    deep_output_dim: 128
+    fusion_token_dim: 8
+    attention_heads: 1
+    attention_weighting: softmax
+    fusion_residual_coef: 0.5
+    dropout: 0.10
+  drug_branch:
+    projected_dim: 512
+    first_token_dim: 16
+    first_output_dim: 256
+    deep_token_dim: 8
+    deep_output_dim: 64
+    fusion_token_dim: 4
+    attention_heads: 1
+    attention_weighting: softmax
+    fusion_residual_coef: 0.5
+    dropout: 0.10
+  relation_dim: 32
+  cross_modal:
+    num_layers: 1
+    num_heads: 4
+    feedforward_multiplier: 4
+    dropout: 0.10
+  explicit_interaction:
+    bilinear_rank: 16
+    bilinear_output_dim: 32
+    dropout: 0.20
+  classifier:
+    hidden_dim: 64
+    bottleneck_dim: 16
+    dropout: 0.20
+
+training:
+  device: cuda
+  max_epochs: 1000
+  batch_size: 256
+  eval_batch_size: 512
+  num_workers: 4
+  pin_memory: true
+  persistent_workers: true
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  gradient_accumulation_steps: 1
+  gradient_clip_norm: 1.0
+  mixed_precision: bf16
+  decision_threshold: 0.5
+  monitor: val_auprc
+  monitor_mode: max
+  save_last_checkpoint: true
+  scheduler:
+    name: reduce_on_plateau
+    factor: 0.5
+    patience: 3
+    threshold: 0.0001
+    threshold_mode: abs
+    min_lr: 0.0000001
+  early_stopping:
+    patience: 20
+    min_delta: 0.0001
+  ema:
+    enabled: true
+    decay: 0.999
+  warmup:
+    enabled: true
+    epochs: 5
+    start_factor: 0.1
